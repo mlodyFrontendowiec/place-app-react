@@ -27,12 +27,11 @@ const StyledListItem = styled.li`
   width: 50%;
   margin: 0 auto;
   list-style: none;
-  box-shadow: 10px 13px 13px #ccc;
+  box-shadow: 0px 10px 15px #ccc;
   border-radius: 20px;
   padding: 10px;
   margin-top: 20px;
-  background-color: #8338ec;
-  transform: scale(1);
+  background-color: #4567fc;
   transition: 0.2s transform;
   :hover {
     transform: scale(1.05);

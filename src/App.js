@@ -8,12 +8,15 @@ import {
 import NewPlace from "./places/pages/NewPlace";
 import Users from "./user/pages/Users";
 import { createGlobalStyle } from "styled-components";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
 
 const App = () => {
   return (
     <div className="App">
-      <GlobalStyle />
       <Router>
+        <Navigation />
+        <GlobalStyle />
         <Switch>
           <Route path="/" exact>
             <Users />
