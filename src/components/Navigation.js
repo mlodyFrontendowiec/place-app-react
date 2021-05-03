@@ -14,8 +14,13 @@ const Navigation = () => {
       setWindowSize(window.innerWidth);
     });
   }, []);
+
   const handleHamburger = () => {
     setShowMenu((prev) => !showMenu);
+  };
+
+  const closeAsideMenu = () => {
+    setShowMenu(false);
   };
   const menuComponent =
     windowSize > 800 ? (
@@ -28,7 +33,10 @@ const Navigation = () => {
       </StyledHamburgerContainer>
     );
 
-  const Aside = windowSize > 800 ? null : <AsideMenu show={showMenu} />;
+  const Aside =
+    windowSize > 800 ? null : (
+      <AsideMenu show={showMenu} closeAside={closeAsideMenu} />
+    );
 
   return (
     <Header>

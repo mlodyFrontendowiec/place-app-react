@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import NavLinks from "./NavLinks";
 
-const AsideMenu = ({ show }) => {
+const AsideMenu = ({ show, closeAside }) => {
   return (
     <StyledAside show={show}>
-      <NavLinks type="aside" />
+      <NavLinks type="aside" closeAside={closeAside} />
     </StyledAside>
   );
 };
@@ -18,7 +18,9 @@ const StyledAside = styled.aside`
   background-color: #3d52d5;
   margin: 0;
   top: 0;
-  ${(props) => (props.show ? `left:0 ` : `left: -100vw;`)}
+  right: 0;
+  ${(props) =>
+    props.show ? `transform:translateX(0)` : `transform:translateX(-100%)`}
 `;
 
 export default AsideMenu;
